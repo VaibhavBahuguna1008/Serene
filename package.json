@@ -4,7 +4,7 @@
   "description": "Mental health tracking and AI-powered analysis app",
   "main": "server/index.js",
   "scripts": {
-    "start": "node /index.js",
+    "start": "node backend/server.js",
     "backend": "nodemon backend/server.js",
     "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend",
     "frontend": "cd frontend && npm run dev",

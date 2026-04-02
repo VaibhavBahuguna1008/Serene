@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useAuth } from '../context/AuthContext';
 import { motion } from 'framer-motion';
 import {
   ChevronRight,
@@ -445,6 +446,8 @@ const categoryStyle = {
 
 /* ─── Component ───────────────────────────────────────────────── */
 const Assessments = () => {
+  const { user } = useAuth();
+  const storageKey = `serene_assessment_results_${user?._id}`;
   const [activeId, setActiveId]       = useState(null);
   const [currentStep, setCurrentStep] = useState(0);
   const [scores, setScores]           = useState([]);
@@ -477,7 +480,7 @@ const Assessments = () => {
       setResult(newResult);
 
       // Persist to localStorage so Dashboard can display it
-      const prev = JSON.parse(localStorage.getItem('serene_assessment_results') || '[]');
+      const prev = JSON.parse(localStorage.getItem(storageKey) || '[]');
       const filtered = prev.filter((r) => r.id !== activeAssessment.id);
       filtered.unshift({
         id: activeAssessment.id,
@@ -488,7 +491,7 @@ const Assessments = () => {
         color: newResult.color,
         date: new Date().toISOString(),
       });
-      localStorage.setItem('serene_assessment_results', JSON.stringify(filtered.slice(0, 20)));
+      localStorage.setItem(storageKey, JSON.stringify(filtered.slice(0, 20)));
     }
   };
 

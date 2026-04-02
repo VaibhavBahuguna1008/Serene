@@ -24,8 +24,10 @@ import {
   ClipboardList,
 } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { useAuth } from '../context/AuthContext';
 
 const Dashboard = () => {
+  const { user } = useAuth();
   const [moodData, setMoodData] = useState([]);
   const [stats, setStats] = useState({
     moodCount: 0,
@@ -81,7 +83,8 @@ const Dashboard = () => {
 
     fetchData();
 
-    const stored = JSON.parse(localStorage.getItem('serene_assessment_results') || '[]');
+    const storageKey = `serene_assessment_results_${user?._id}`;
+    const stored = JSON.parse(localStorage.getItem(storageKey) || '[]');
     setAssessmentResults(stored);
   }, []);
 

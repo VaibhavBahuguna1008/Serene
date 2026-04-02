@@ -1,17 +1,19 @@
 const OpenAI = require('openai');
 const { GoogleGenerativeAI } = require('@google/generative-ai');
 
-// ── Clients ────────────────────────────────────────────────────────────────
+// ── Clients (lazy — created on first use so missing keys fail at request time) ─
 
-const kieClient = new OpenAI({
-  baseURL: process.env.KIE_AI_BASE_URL,
-  apiKey:  process.env.KIE_AI_API_KEY,
-});
+let _kieClient, _deepseekClient;
 
-const deepseekClient = new OpenAI({
-  baseURL: process.env.DEEPSEEK_BASE_URL,
-  apiKey:  process.env.DEEPSEEK_API_KEY,
-});
+const kieClient = () => {
+  if (!_kieClient) _kieClient = new OpenAI({ baseURL: process.env.KIE_AI_BASE_URL, apiKey: process.env.KIE_AI_API_KEY || 'missing' });
+  return _kieClient;
+};
+
+const deepseekClient = () => {
+  if (!_deepseekClient) _deepseekClient = new OpenAI({ baseURL: process.env.DEEPSEEK_BASE_URL, apiKey: process.env.DEEPSEEK_API_KEY || 'missing' });
+  return _deepseekClient;
+};
 
 const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
 
@@ -30,7 +32,7 @@ const SERENE_SYSTEM_PROMPT =
 const complete = async (messages, maxTokens = 500) => {
   // Tier 1 — Kie.ai
   try {
-    const res = await kieClient.chat.completions.create({
+    const res = await kieClient().chat.completions.create({
       model:      process.env.KIE_AI_CHAT_MODEL,
       messages,
       max_tokens: maxTokens,
@@ -43,7 +45,7 @@ const complete = async (messages, maxTokens = 500) => {
 
   // Tier 2 — DeepSeek
   try {
-    const res = await deepseekClient.chat.completions.create({
+    const res = await deepseekClient().chat.completions.create({
       model:      process.env.DEEPSEEK_MODEL,
       messages,
       max_tokens: maxTokens,
