@@ -1,93 +1,87 @@
-# 🧠 Mental Health Tracker & AI Assistant
+# 🚀 Live Tracker Pro
 
-A modern full-stack mental health application designed to help users track emotions, reflect through journaling, and receive AI-powered insights for better mental well-being.
-
-> ⚠️ This application is intended for educational purposes and does not replace professional medical advice.
+A modern real-time tracking and analytics platform designed to deliver high-precision location monitoring, intelligent insights, and an immersive user experience.
 
 ## 🚀 Overview
 
-This platform combines **mental health tracking**, **guided journaling**, and **AI-driven assistance** to create a supportive digital space for self-reflection and emotional growth.
+Live Tracker Pro is a full-stack web application that enables seamless real-time location tracking with advanced analytics, privacy controls, and interactive features.
 
-It is built with a scalable full-stack architecture and integrates AI to provide meaningful, personalized insights.
+It goes beyond traditional tracking systems by combining **real-time data**, **behavioral insights**, and **user-centric design** into a single platform.
 
----
 
 ## ✨ Core Features
 
-### 📊 Mood Tracker
-Track your daily emotions and intensity, and visualize patterns over time through interactive charts.
+### 📍 Real-Time Tracking
+Track live location with millisecond-level updates using WebSockets and high-accuracy Geolocation API.
 
-### ✍️ Guided Journal
-Write and store personal thoughts using structured prompts that encourage reflection and growth.
+### 🛰️ Exact Positioning
+Display precise GPS coordinates (up to 6 decimals) with accuracy visualization and quick copy functionality.
 
-### 🤖 AI Companion
-Engage in meaningful conversations with an AI assistant trained for supportive and empathetic interaction.
+### 🧭 Location Timeline
+Maintain a complete history of location data with timestamp, speed, and address details.
 
-### 🧩 Thought Reframing
-Identify and challenge negative thinking patterns using AI-guided Cognitive Behavioral Therapy (CBT) techniques.
+### 🎥 Time Travel Replay
+Replay movement history with adjustable speeds (0.5×, 1×, 2×, 4×) and full playback controls.
 
-### 🧘 Therapy Toolkit
-Access tools such as:
-- Breathing exercises  
-- Grounding techniques  
-- Mindfulness practices  
+### 🚨 Radar Geofencing
+Create dynamic zones (100m–5km) and receive instant alerts when entering or exiting defined areas.
 
-### 📋 Mental Health Assessments
-Standardized screenings:
-- PHQ-9 (Depression)
-- GAD-7 (Anxiety)
+### 🛡️ Privacy Ghost Mode
+Obfuscate location with ±500m offset to maintain privacy while staying connected.
 
-### 🧠 Therapy Awareness
-Learn about different therapeutic approaches:
-- CBT (Cognitive Behavioral Therapy)  
-- DBT (Dialectical Behavior Therapy)  
-- ACT (Acceptance & Commitment Therapy)  
+### 📊 Fleet Analytics
+Gain insights such as:
+- Behavioral patterns  
+- Anomaly detection  
+- Top locations  
+- Activity breakdowns  
 
-### 📚 Learning Hub
-Curated articles and guides to help users better understand mental health and wellness.
+### 📦 Trip Recording
+Capture trips with a single click, auto-generate stats, and store them with searchable history.
 
-### 🚨 Crisis Support
-Quick access to emergency resources, helplines, and safety planning tools.
+### 🎮 XP & Leveling
+Gamified experience where users earn XP based on movement and unlock progression levels.
 
 ---
 
 ## 📸 Screenshots
-<img width="1908" height="927" alt="MHSS1" src="https://github.com/user-attachments/assets/13132f3b-9f3e-4954-bcf4-e84cc54655c0" />
-<img width="1570" height="882" alt="MHSS2" src="https://github.com/user-attachments/assets/2008dc8c-2b0e-469f-81ee-64a7e7c1595a" />
-<img width="1580" height="928" alt="MHSS3" src="https://github.com/user-attachments/assets/a2d692ef-94f7-4313-8e74-55bffa25df0f" />
-<img width="1263" height="921" alt="MHSS4" src="https://github.com/user-attachments/assets/2835560b-8323-4cdf-9c55-7de17dbaf716" />
-<img width="1901" height="965" alt="MHSS5" src="https://github.com/user-attachments/assets/bb459c0b-0a18-479b-b16e-a7cc26ceecd2" />
-<img width="1532" height="942" alt="MHSS6" src="https://github.com/user-attachments/assets/bd498a3e-e058-4c5c-9cae-3fd3373c6743" />
-<img width="1543" height="922" alt="MHSS10" src="https://github.com/user-attachments/assets/3eccc8c7-cf57-4444-9da7-970341b1f1ac" />
-<img width="1546" height="926" alt="MHSS11" src="https://github.com/user-attachments/assets/1f9ed59d-d1de-494d-b801-55c4325155fa" />
+
+<img width="1872" height="912" alt="RTTSS1" src="https://github.com/user-attachments/assets/46e2bdd2-0898-45c1-b839-46617ef7d146" />
+<img width="1918" height="967" alt="RTTSS4" src="https://github.com/user-attachments/assets/3154bfa5-0478-41d8-8f1a-623fe4aea98a" />
+<img width="1918" height="1078" alt="RTTSS2" src="https://github.com/user-attachments/assets/62cbf5f2-9f27-4062-b039-7864725d640c" />
+<img width="1918" height="918" alt="RTTSS7" src="https://github.com/user-attachments/assets/91b98701-1c52-4511-acb5-a517af323831" />
+<img width="1915" height="926" alt="RTTSS9" src="https://github.com/user-attachments/assets/6221280e-d019-4e25-aef6-21aee9e2282b" />
+<img width="724" height="1024" alt="RTTSS8" src="https://github.com/user-attachments/assets/2e9ee83c-86f3-41fc-982d-84308f3880f2" />
+<img width="1915" height="911" alt="RTTSS5" src="https://github.com/user-attachments/assets/808380e6-0fe3-427d-8279-4314b1885189" />
+<img width="1916" height="957" alt="RTTSS6" src="https://github.com/user-attachments/assets/d968989b-a93c-4414-98c0-9d70ada3d77a" />
+
 
 ---
 
 ## 🌐 Live Demo
 
-**Deployed on Render**: https://serene-01rt.onrender.com/
+Live Demo: https://live-tracker-pro.vercel.app/
+
+---
 
 ## 🧠 Tech Stack
 
 ### 🎨 Frontend
-- **React 19** – Component-driven UI with modern hooks and concurrent features  
-- **Vite 8** – Fast development server and optimized production builds  
-- **Tailwind CSS 4** – Utility-first styling with a custom design system  
-- **Framer Motion** – Smooth animations and micro-interactions  
+- React.js  
+- Tailwind CSS  
+- Vite  
 
 ### ⚙️ Backend
-- **Node.js + Express** – RESTful API with middleware and modular architecture  
-
+- Node.js  
+- Express.js  
 
 ### 🗄️ Database
-- **MongoDB + Mongoose** – Flexible and scalable document-based data modeling  
+- MongoDB  
 
-### 🔐 Security
-- **JWT Authentication** – Secure, stateless authentication system  
+### 🔌 Real-Time
+- Socket.io (WebSockets)
 
-### 🤖 AI Integration
-- **Claude AI (Anthropic)**  
-  - Conversational AI support  
-  - Thought reframing using CBT techniques  
-  - Emotional insight generation  
+### 🗺️ Maps
+- OpenStreetMap + Leaflet
+- Nominatim (Geocoding)
 
